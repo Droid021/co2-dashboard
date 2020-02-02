@@ -82,7 +82,7 @@ d3.queue()
         var dataValue = data[dataType] ?
           data[dataType].toLocaleString() + " " + units :
           "Data Not Available";
-        tooltip 
+        tooltip
             .html(`
               <p>Country: ${data.country}</p>
               <p>${formatDataType(dataType)}: ${dataValue}</p>
@@ -97,26 +97,9 @@ function formatDataType(key) {
   return key[0].toUpperCase() + key.slice(1).replace(/[A-Z]/g, c => " " + c);
 }
 
+
 function getPercentage(d) {
   var angle = d.endAngle - d.startAngle;
   var fraction = 100 * angle / (Math.PI * 2);
   return fraction.toFixed(2) + "%";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
